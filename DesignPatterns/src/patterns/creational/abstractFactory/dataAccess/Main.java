@@ -10,7 +10,7 @@ public class Main {
 	public static String DATA_PERSISTANCE = "MEMORY"; //SQL, MEMORY
 	
 	public static void main(String [] args) {
-		DataAccess dataAccess = DataAccess.Factory.create();
+		DataAccess dataAccess = DataAccessFactory.create();
 		
 		testConf(dataAccess);
 		
