@@ -7,17 +7,22 @@ public class DataAccessFactory {
 	
 	// Create the abstract factory.
 	public static DataAccess create() {
-		DataAccess ret = decide();
+		DataAccess ret = null;
+		
+		switch (Main.DATA_PERSISTANCE) {
+		case "MEMORY"	: ret = createMemoryDataAccess();
+		case "SQL"		: ret = createSQLDataAccess();
+		}
 		
 		return ret;
 	}
 	
-	private static DataAccess decide() { 
-		switch (Main.DATA_PERSISTANCE) {
-		case "MEMORY"	: return MemoryDataAccessFactory.INSTANCE;
-		case "SQL"		: return new SQLDataAccessFactory();
-		default			: return null;
-		}
+	private static DataAccess createMemoryDataAccess() {
+		return MemoryDataAccessFactory.INSTANCE;
+	}
+	
+	private static DataAccess createSQLDataAccess() {
+		return new SQLDataAccessFactory();
 	}
 
 }
