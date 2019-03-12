@@ -3,7 +3,6 @@ package patterns.creational.abstractFactory.dataAccess;
 import patterns.creational.abstractFactory.dataAccess.dao.ConfigurationDAO;
 import patterns.creational.abstractFactory.dataAccess.dao.UserDAO;
 
-// Basic factory interface.
 public interface DataAccess {
 	
 	ConfigurationDAO getConfigurationDAO();
