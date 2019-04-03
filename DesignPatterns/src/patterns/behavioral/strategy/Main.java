@@ -23,8 +23,8 @@ public class Main {
 	}
 	
 	private void execute() {
-		final AbstractPerson danko = new CptDanko();
-		danko.useStrategy(this.library);
+		final AbstractPerson captain = new CptDanko();
+		captain.useStrategy(this.library);
 		
 		final AbstractPerson prism = new Prism();
 		prism.useStrategy(this.library);
@@ -36,7 +36,7 @@ public class Main {
 	private void buildLibrary() {
 		final List<Document> lawDocs = new ArrayList<>();
 		lawDocs.add(new Document("Law for dummies"));
-		lawDocs.add(new Document("How to understand book - Law for dummies"));
+		lawDocs.add(new Document("What is law"));
 		this.library.put(Topic.LAW, lawDocs);
 		
 		final List<Document> itDocs = new ArrayList<>();
