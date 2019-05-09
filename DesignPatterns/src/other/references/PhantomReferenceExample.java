@@ -56,6 +56,7 @@ public class PhantomReferenceExample {
         // Now, let's loose the strong reference, the object to which 'o' was pointing earlier 
         // will be eligible for garbage collection.
         o = null;  
+		System.out.println("The strong reference 'o' has been set to null. The phantom reference 'phantomRefToSb' stays active!");
 
         // Let's give GC a chance to collect it
         suggestGc();

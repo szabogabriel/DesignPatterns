@@ -39,6 +39,7 @@ public class SoftReferenceExample2 {
     	// Now, object to which 'o' was pointing earlier is eligible for garbage collection.
     	// However, it should not be garbage collected, until JVM is in need of memory badly.
     	o = null;
+		System.out.println("The strong reference 'o' has been set to null. The soft reference 'softRefToO' stays active!");
     	
     	// Let's allocate some heap and make JVM in need of free memory
     	List<byte[]> data = new ArrayList<byte[]>();

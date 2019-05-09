@@ -52,7 +52,7 @@ public class WeakHashMapExample {
           
         // Make o1 eligible for garbage collection by clearing its PK
         pk1 = null;  
-        System.out.println("pk1 has been set to null");
+		System.out.println("The primary key 'pk1' has been set to null. The primary key 'pk1' stays not null!");
         
         // Let's give GC a chance to collect it
         suggestGc();

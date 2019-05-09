@@ -40,10 +40,11 @@ public class StrongReferenceExample {
 		System.out.println(String.format("Our instance: %s", o));
           
         // Now, object to which 'o' was pointing earlier is  
-        // eligible for garbage collection. 
+        // eligible for garbage collection.
         o = null;
+		System.out.println("Strong reference 'o' has been set to null");
         
-        // Let's give GC a chance to collect it
+        // Let's give GC a chance to collect it (nothing will happen)
         suggestGc();
     } 
 }

@@ -49,6 +49,7 @@ public class WeakReferenceExample {
         // Now, object to which 'o' was pointing earlier is  
         // eligible for garbage collection.
         o = null;  
+		System.out.println("The strong reference 'o' has been set to null. The weak reference 'weakRefToO' stays active!");
         
         // Let's give GC a chance to collect it
         suggestGc();
